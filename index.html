@@ -7,23 +7,31 @@
   </head>
   <body>
     <script>
-      fetch("https://buythefans.com/api/v2", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-        Host: "buythefans.com",
-        Referer: "https://buythefans.com/account",
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // Handle the JSON response here
-          console.log(data);
-        })
-        .catch((error) => {
-          console.error("An error occurred:", error);
-        });
+const apiKey = "1b70c881f2ecec0585f256aa1b906b30";
+
+const requestBody = {
+  key: apiKey,
+  action: "services",
+};
+
+fetch("https://buythefans.com/api/v2", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(requestBody),
+  Host: "buythefans.com",
+  Referer: "https://buythefans.com/account",
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // Handle the JSON response here
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("An error occurred:", error);
+  });
+
     </script>
   </body>
 </html>
