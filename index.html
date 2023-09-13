@@ -14,7 +14,7 @@ const requestBody = {
   action: "services",
 };
 
-fetch("https://buythefans.com/api/v2", {
+fetch("https://buythefans.com/api/v2", { mode: 'no-cors'}, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
